@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-completeness-summary.component.css']
 })
 export class OrderCompletenessSummaryComponent implements OnInit {
-  dataSet = [
+  public dataSet = [
     {
       key    : '1',
       name   : 'John Brown',
@@ -26,7 +26,7 @@ export class OrderCompletenessSummaryComponent implements OnInit {
       address: 'Sidney No. 1 Lake Park'
     }
   ];
-  
+
   constructor() { }
 
   ngOnInit() {

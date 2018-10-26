@@ -1,4 +1,5 @@
-import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, NgModule } from '@angular/core';
+
 
 @Component({
   selector: 'app-ant-layout',

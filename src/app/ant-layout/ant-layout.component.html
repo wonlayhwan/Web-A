@@ -8,7 +8,9 @@
         <li nz-submenu >
             <span title><i nz-icon type="appstore"></i> {{isCollapsed? '': 'Asprova运算结果'}}</span> 
            <ul>
-              <li nz-menu-item>订单齐套情况</li>
+              <li nz-menu-item>
+                <a routerLink="/orderCompleteness" routerLinkActive="active">订单齐套情况</a>
+               </li>
               <li nz-menu-item>齐套订单占料明细</li>
            </ul>
         </li>
@@ -26,7 +28,8 @@
       </nz-header>
       <nz-content style="margin:24px 16px 0;">
         <div style="padding:24px; background: #fff; min-height: 360px;">
-          Content {{isCollapsed}}
+          <!--route 占位符 is here-->
+          <router-outlet></router-outlet>
         </div>
       </nz-content>
       <nz-footer style="text-align: center;">深圳三诺信息科技有限公司 ©2018 Implement By Angular</nz-footer>

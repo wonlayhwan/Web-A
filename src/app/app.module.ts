@@ -9,13 +9,27 @@ import { AppComponent } from './app.component';
 import { AntLayoutComponent } from './ant-layout/ant-layout.component';
 import { NgZorroAntdModule , NZ_I18N, zh_CN} from 'ng-zorro-antd';
 import { OrderCompletenessSummaryComponent } from './order-completeness-summary/order-completeness-summary.component';
+import { RouterModule, Routes } from '@angular/router';
 
 /** 配置 angular i18n **/
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 registerLocaleData(zh);
 
-
+const appRoutes = [
+  { path: 'orderCompleteness', component: OrderCompletenessSummaryComponent }// ,
+  // { path: 'hero/:id',      component: HeroDetailComponent },
+  // {
+  //   path: 'heroes',
+  //   component: HeroListComponent,
+  //   data: { title: 'Heroes List' }
+  // },
+  // { path: '',
+  //   redirectTo: '/heroes',
+  //   pathMatch: 'full'
+  // },
+  // { path: '**', component: PageNotFoundComponent }
+];
 
 @NgModule({
   declarations: [
@@ -29,7 +43,12 @@ registerLocaleData(zh);
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+
+    RouterModule.forRoot(
+      appRoutes // ,
+      // { enableTracing: true } // <-- debugging purposes only
+    )
   ],
   /** 配置 ng-zorro-antd 国际化 **/
   providers: [{ provide: NZ_I18N, useValue: zh_CN }],
