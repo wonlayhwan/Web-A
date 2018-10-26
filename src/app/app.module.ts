@@ -14,10 +14,14 @@ import { RouterModule, Routes } from '@angular/router';
 /** 配置 angular i18n **/
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { ReadyOrderMaterialsComponent } from './ready-order-materials/ready-order-materials.component';
+import { CrossFeedingComponent } from './cross-feeding/cross-feeding.component';
 registerLocaleData(zh);
 
 const appRoutes = [
-  { path: 'orderCompleteness', component: OrderCompletenessSummaryComponent }// ,
+  { path: 'orderCompleteness', component: OrderCompletenessSummaryComponent } ,
+  { path: 'readyOrderMaterials', component: ReadyOrderMaterialsComponent } ,
+  { path: 'crossFeeding', component: CrossFeedingComponent } ,
   // { path: 'hero/:id',      component: HeroDetailComponent },
   // {
   //   path: 'heroes',
@@ -35,7 +39,9 @@ const appRoutes = [
   declarations: [
     AppComponent,
     AntLayoutComponent,
-    OrderCompletenessSummaryComponent
+    OrderCompletenessSummaryComponent,
+    ReadyOrderMaterialsComponent,
+    CrossFeedingComponent
   ],
   imports: [
     BrowserModule ,
