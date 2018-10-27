@@ -6,7 +6,7 @@
       <ul nz-menu [nzTheme]="'dark'"  
         [nzMode]="'inline'" [nzInlineCollapsed]="isCollapsed">
         <li nz-submenu >
-            <span title><i nz-icon type="appstore"></i> {{isCollapsed? '': 'Asprova运算结果'}}</span> 
+            <span title><i nz-icon type="table"></i> {{isCollapsed? '': 'Asprova运算结果'}}</span> 
            <ul>
               <li nz-menu-item>
                 <a routerLink="/orderCompleteness" routerLinkActive="active">订单齐套情况</a>
@@ -17,7 +17,9 @@
            </ul>
         </li>
         <li nz-menu-item > 
-            <a title routerLink="/crossFeeding" routerLinkActive="active">Cross Feeding</a>
+            <a title routerLink="/crossFeeding" routerLinkActive="active">
+                <i nz-icon type="eye"></i>{{isCollapsed? '': 'Cross Feeding'}}
+            </a>
         </li> 
       </ul>
     </nz-sider>
