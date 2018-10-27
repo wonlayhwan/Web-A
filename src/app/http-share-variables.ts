@@ -1,13 +1,13 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-const httpOption = {
+export const httpOption = {
     headers: new HttpHeaders({
         'Content-Type': 'application/json'
       })
 };
 
 
-const webApiAddress = {
+export const webApiAddress = {
     completeness: 'https://localhost:5001'
 };
 
