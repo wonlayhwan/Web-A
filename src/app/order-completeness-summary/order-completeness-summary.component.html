@@ -1,22 +1,45 @@
-<nz-table #basicTable [nzData]="dataSet">
+<nz-table #basicTable [nzData]="orderCompletenessList">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Age</th>
-      <th>Address</th>
-      <th>Action</th>
+      <th>实际订单代码</th>
+      <th>成品代码</th>
+      <th>订单数量</th>
+      <th>订单交货期</th>
+      <th>目标齐套时间</th>
+      <th>禁用国家地区</th>
+      <th>OTS Qty</th>
+      <th>OTS Days</th>
+      <th>订单优先顺序</th>
+      <th>齐套数量</th>
+      <th>齐套时间</th>
+      <th>投产时间</th>
+      <th>成品时间</th>
+      <th>计划发货日期</th>
+      <th>操作时间</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let data of basicTable.data">
-      <td>{{data.name}}</td>
-      <td>{{data.age}}</td>
-      <td>{{data.address}}</td>
-      <td>
+      <td>{{data.ProductOrderCode}}</td>
+      <td>{{data.ProductCode}}</td>
+      <td>{{data.ProductQtyOrigin}}</td>
+      <td>{{data.DeliveryDate}}</td>
+      <td>{{data.TargetMaterialReadyTime}}</td>
+      <td>{{data.DisableGEO}}</td>
+      <td>{{data.OTSQty}}</td>
+      <td>{{data.OTSDays}}</td>
+      <td>{{data.AnalyseOrder}}</td>
+      <td>{{data.ProductCompleteQty}}</td>
+      <td>{{data.OutputMaterialReadyTime}}</td>
+      <td>{{data.ManufactureTime}}</td>
+      <td>{{data.ProductReadyTime}}</td>
+      <td>{{data.PlanShippedDate}}</td>
+      <td>{{data.UpdateDate}}</td> 
+      <!-- <td>
         <a>Action 一 {{data.name}}</a>
         <nz-divider nzType="vertical"></nz-divider>
         <a>Delete</a>
-      </td>
+      </td> -->
     </tr>
   </tbody>
 </nz-table>
